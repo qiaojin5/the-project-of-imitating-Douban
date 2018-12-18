@@ -1,0 +1,19 @@
+$textColor: #0DB828;
+* {
+	margin: 0;
+	padding: 0;
+}
+@mixin arrow($w: 10px, $color: #fff, $dir: top) {
+	// 兼容行内和块级
+	width: 0;
+	font-size: 0;
+	border: $w solid transparent;
+	border-#{$dir}: $w solid $color;
+}
+@mixin clearfix(){
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+	}	
+}
